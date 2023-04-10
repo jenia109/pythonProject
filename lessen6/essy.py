@@ -12,6 +12,7 @@ def avg(a, b):
 #    Результат:
 #        - float.
 #    """
+
     return (a * b) ** 0.5
 
 try:
@@ -30,6 +31,15 @@ except Exception:
 # Напишите скрипт, создающий директории dir_1 - dir_9 в папке,
 # из которой запущен данный скрипт.
 # И второй скрипт, удаляющий эти папки.
+
+import os
+
+
+folder_name_template = "New_folder_{}"
+
+for i in range(10):
+    new_folder_name = (os.path.join(os.getcwd()), folder_name_template.format(i))
+    os.mkdir(new_folder_name)
 
 # Задача-3:
 # Напишите скрипт, отображающий папки текущей директории.
